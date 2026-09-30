@@ -1,11 +1,22 @@
+/* Reset Básico */
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f4f4f9;
   color: #333333;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px; /
+  padding: 0;
 }
 
+/* Scroll suave para os links de navegação interna (#) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
 header {
   background-color: #2c3e50;
   color: #ffffff;
@@ -18,35 +29,137 @@ header h1 {
   margin: 0 0 10px 0;
 }
 
+/* Menu de Navegação */
 nav {
   background-color: #0bb6e0;
   padding: 10px;
   text-align: center;
   border-radius: 0 0 8px 8px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
   text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 
-main {
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 Colunas principais */
+  gap: 20px;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Posições específicas dos elementos no Grid 2D */
+.item-intro {
+  grid-column: 1 / span 3; /* Ocupa as 3 colunas no topo */
+  text-align: center;
+}
+
+.item-intro h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.item-img1 {
+  grid-column: 1 / span 1;
+}
+
+.item-img1 img,
+.item-img2 img {
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.item-tabela {
+  grid-column: 2 / span 2; /* Ocupa 2 colunas à direita da primeira imagem */
+}
+
+/* Espaço em branco estratégico (White Space) */
+.item-blank {
+  grid-column: 1 / span 1;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.item-img2 {
+  grid-column: 2 / span 1;
+}
+
+.item-curiosidades {
+  grid-column: 3 / span 1;
+}
+
+.item-curiosidades ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.item-curiosidades li {
+  margin-bottom: 8px;
 }
 
 
+.localizacao-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.localizacao-texto {
+  flex: 1;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.localizacao-texto p {
+  margin-bottom: 15px;
+}
+
+.localizacao-mapa {
+  flex: 1;
+  width: 100%;
+}
+
+.localizacao-mapa iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagens Gerais e Tabelas */
 img {
   max-width: 100%;
   height: auto;
@@ -55,42 +168,15 @@ img {
   border-radius: 6px;
 }
 
-
-.fotografias {
-  overflow: auto;
-}
-
-.fotografias img {
-  float: left;
-  width: 23%;
-  margin-right: 2%;
-  margin-bottom: 20px;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-footer {
-  background-color: #2c3e50;
-  color: #ffffff;
-  text-align: center;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 0.9em;
-  clear: both;
-}
-
-
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
-th, td {
-  border: 1px solid #333333;
+th,
+td {
+  border: 1px solid #dddddd;
   padding: 10px;
   text-align: left;
 }
@@ -102,4 +188,47 @@ th {
 
 td {
   color: #333333;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  clear: both;
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .item-intro,
+  .item-img1,
+  .item-tabela,
+  .item-img2,
+  .item-curiosidades {
+    grid-column: 1 / -1;
+  }
+
+  .item-blank {
+    display: none;
+  }
+
+  .localizacao-container {
+    flex-direction: column;
+  }
+
+  .localizacao-mapa iframe {
+    height: 250px;
+  }
 }

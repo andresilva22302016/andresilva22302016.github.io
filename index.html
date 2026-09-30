@@ -1,44 +1,88 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>André Silva - Portefólio DIW</title>
     <link rel="stylesheet" href="styles.css" />
-    <title>André Silva</title>
   </head>
-
   <body>
-    <header>
-      <h1>Primeira Página Web!</h1>
-    </header>
-    <main>
-      <p>Eis a minha primeira Página Web!</p>
-      <p>
-        Na Unidade Curricular de
-        <a href="https://moodle.ensinolusofona.pt/course/view.php?id=27320"
-          >Desenvolvimento Web
-        </a>
-        abordaremos as seguintes tecnologias Web &#1237760;:
-      </p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React e Next.js</li>
-      </ul>
-      <p>Iremos criar soluções criativas!</p>
-      <nav>
-        <ul>
-          <li><a href="lab1/index.html">Lab1</a></li>
-          <li><a href="lab2/index.html">Lab2</a></li>
-          <li><a href="quiz/index.html">quiz</a></li>
-        </ul>
+    <section id="inicio" class="hero-section">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#disciplina">Interfaces Web</a></li>
+          </ul>
+        </nav>
+      </header>
 
-      </nav>
-      <img src="images/image.svg" alt="Desenvolvimento de Interfaces Web" />
-    </main>
-    <footer>
-      <p>Universidade © Lusófona 2026</p>
-    </footer>
+      <div class="hero-content">
+        <h1>André Silva</h1>
+        <p class="motivational-text">
+          "A criar o futuro da Web, uma linha de código de cada vez."
+        </p>
+        <a href="#projetos" class="cta-button">Ver os meus Projetos</a>
+      </div>
+    </section>
+
+    <section id="projetos" class="projetos-section">
+      <h2>Os meus Labs</h2>
+      <div class="cards-container">
+        <div class="card">
+          <h3>Lab 1</h3>
+          <a href="lab1/index.html">Explorar</a>
+        </div>
+        <div class="card">
+          <h3>Lab 2</h3>
+          <a href="lab2/index.html">Explorar</a>
+        </div>
+        <div class="card">
+          <h3>Lab 3</h3>
+          <a href="lab3/index.html">Explorar</a>
+        </div>
+        <div class="card">
+          <h3>Quiz</h3>
+          <p>Aplicação interativa desenvolvida com JavaScript.</p>
+          <a href="quiz/index.html">Explorar</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="disciplina" class="disciplina-section">
+      <h2>Unidade Curricular</h2>
+      <div class="disciplina-content">
+        <div class="text-box">
+          <p>
+            Na Unidade Curricular de
+            <a
+              href="https://moodle.ensinolusofona.pt/course/view.php?id=27320"
+              target="_blank"
+              >Desenvolvimento Web</a
+            >
+            abordaremos as seguintes tecnologias Web:
+          </p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React e Next.js</li>
+          </ul>
+          <p>Iremos criar soluções criativas!</p>
+        </div>
+
+        <div class="image-box">
+          <img
+            src="images/image.svg"
+            alt="Wordcloud Desenvolvimento de Interfaces Web"
+          />
+        </div>
+      </div>
+
+      <footer>
+        <p>Universidade © Lusófona 2026</p>
+      </footer>
+    </section>
   </body>
 </html>

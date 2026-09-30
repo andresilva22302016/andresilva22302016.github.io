@@ -10,42 +10,57 @@
     <header>
       <h1>Loures</h1>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="local.html">Localização</a>
-        <a href="multimedia.html">Multimédia</a>
-        <a href="info.html">Informação</a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="local.html">Localização</a></li>
+          <li><a href="multimedia.html">Multimédia</a></li>
+          <li><a href="info.html">Informação</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
       <h2>Multimédia</h2>
       <p>
-        Nesta página, em breve, poderá encontrar fotografias, vídeos e outros
-        conteúdos multimédia sobre o concelho de Loures.
+        Nesta página poderá encontrar fotografias, vídeos e outros conteúdos
+        multimédia sobre o concelho de Loures.
       </p>
-      <p>
+      <div class="sub-menu">
+        <a href="#destaque">Destaque</a>
         <a href="#fotografias">Fotografias</a>
-        <a href="#video">Video</a>
-        <a href="#poema">Poema</a>
-      </p>
+        <a href="#video">Vídeo</a>
+        <a href="#poema">Poesia</a>
+      </div>
     </main>
 
-    <section id="fotografias">
+    <!-- Nova Secção: Imagem Emblemática com Texto Posicionado em unidades VW -->
+    <section id="destaque" class="hero-emblematica">
+      <img
+        src="images/imagem_loures1.jpg"
+        alt="Fotografia Emblemática de Loures"
+        class="imagem-full"
+      />
+      <div class="texto-emblematico">
+        <p>"Loures: Onde a tradição encontra o futuro."</p>
+      </div>
+    </section>
+
+    <!-- Secção Fotografias -->
+    <section id="fotografias" class="section-fotografias">
       <h3>Fotografias</h3>
       <div class="fotografias">
         <img src="images/imagem_loures1.jpg" alt="Monumento" />
-        <img src="images/imagem_loures2.jpg" alt="Camara Municipal de Loures" />
+        <img src="images/imagem_loures2.jpg" alt="Câmara Municipal de Loures" />
         <img src="images/imagem_loures3.jpg" alt="Paisagem" />
         <img src="images/imagem_loures4.webp" alt="Natal em Loures" />
       </div>
     </section>
 
-    <section id="video">
-      <h3>Video</h3>
-      <div class="video">
+    <!-- Secção Vídeo -->
+    <section id="video" class="section-video">
+      <h3>Vídeo</h3>
+      <div class="video-container">
         <iframe
-          width="560"
-          height="315"
           src="https://www.youtube.com/embed/MawCc_3ZOHk?si=vwWJd0uYLO4mk1Ys"
           title="YouTube video player"
           frameborder="0"
@@ -64,7 +79,8 @@
       </div>
     </section>
 
-    <section id="poema">
+    <!-- Secção Poesia -->
+    <section id="poema" class="section-poema">
       <h3>Poesia</h3>
       <div class="poema">
         <p>
