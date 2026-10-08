@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const btnConta = document.getElementById("btnConta");
     const spanContador = document.getElementById("spanContador");
-    let cliques = 33;
+    let cliques = 0;
 
     if (btnConta && spanContador) {
         btnConta.addEventListener("click", function() {
