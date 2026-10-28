@@ -1,0 +1,91 @@
+/* Estilos Gerais da Página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 5. Estilização dos produtos (flex e flex-wrap) */
+#produtos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Estilização de cada produto */
+.cartao-produto {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao-produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cartao-produto img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.cartao-produto h2 {
+  font-size: 1.1rem;
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.cartao-produto .preco {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #27ae60;
+  margin: 5px 0;
+}
+
+.cartao-produto .descricao {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.cartao-produto .avaliacao {
+  font-size: 0.85rem;
+  color: #f39c12;
+  margin-bottom: 15px;
+}
+
+.cartao-produto button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.cartao-produto button:hover {
+  background-color: #2980b9;
+}
